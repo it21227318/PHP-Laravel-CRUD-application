@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="{{url('css/products.css')}}">
 </head>
 <body>
-<h1>All Products</h1>
+    @auth
+
+    <form class="logout" action="/logout" method="post">
+        @csrf
+        <button>Log out</button>
+    </form>
+
+    <h1>All Products</h1>
     
     <div class="tablecontainer">
         <div class="createbutton">
             <a href="{{route('product.create')}}">Create a Product</a>
         </div>
+        
         <div>
             @if(session()->has('success'))
                 <div class="alert">
@@ -59,5 +67,9 @@
             </tbody>
         </table>
     </div>
+
+    @else
+    <p>not logged in</p>
+    @endauth
 </body>
 </html>

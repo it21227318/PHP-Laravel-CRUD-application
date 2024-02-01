@@ -12,7 +12,7 @@
     <h1>Create New product</h1>
 
     
-    <div class="formcontainer">
+    <div class="formcontainer double">
 
         <div class="errorcontainer">
             @if($errors->any())

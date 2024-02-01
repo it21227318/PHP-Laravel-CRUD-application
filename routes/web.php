@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::post('/register', [ProductController::class, 'register']);
+Route::post('/logout', [ProductController::class, 'logout']);
+Route::post('/login', [ProductController::class, 'login']);
 
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
