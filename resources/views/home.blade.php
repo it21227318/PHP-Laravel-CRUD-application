@@ -36,7 +36,7 @@
     <div class="wrapper">
         
         <div class="formcontainer double">
-            <h1>register</h1>
+            <h1>Register</h1>
             <form action="/register" method="post">
             @csrf
             <div class="content">

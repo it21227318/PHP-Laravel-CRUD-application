@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{{url('css/all.css')}}">
 </head>
 <body>
-    
+    @auth
+        
     <h1>Create New product</h1>
 
     
@@ -49,7 +50,7 @@
         
                 <div class="input">
                     <label for="des">Description</label>
-                    <input type="text" name="des" id= "des" placeholder="description">
+                    <input type="text" name="description" id= "des" placeholder="description">
                 </div>
         
                 <div class="submitcontainer">
@@ -58,5 +59,8 @@
             </div>
         </form>
     </div>
+    @else
+    <p>log in first</p>
+    @endauth
 </body>
 </html>

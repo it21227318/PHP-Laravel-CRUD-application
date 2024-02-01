@@ -9,6 +9,7 @@
 </head>
 <body>
     
+    @auth
     <h1>Edit a Product</h1>
     <div>
         @if($errors->any())
@@ -49,5 +50,8 @@
     </div>
     </form>
     </div>
+    @else
+    <p>login first</p>
+    @endauth
 </body>
 </html>
