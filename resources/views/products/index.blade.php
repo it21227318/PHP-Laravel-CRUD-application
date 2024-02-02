@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All products</title>
     <link rel="stylesheet" href="{{url('css/products.css')}}">
+    <link rel="stylesheet" href="{{url('css/home.css')}}">
 </head>
 <body>
     @auth
@@ -69,7 +70,14 @@
     </div>
 
     @else
-    <p>not logged in</p>
+    
+    <h1>Please login first</p>
+
+        <form method="get" action="/" class="submitcontainer log">
+            @csrf
+            <input action="/" type="submit" value="Log In/Register" />
+        </form >
+
     @endauth
 </body>
 </html>

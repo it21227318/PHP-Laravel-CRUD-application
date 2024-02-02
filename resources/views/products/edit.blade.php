@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Edit product</title>
     <link rel="stylesheet" href="{{url('css/all.css')}}">
+    <link rel="stylesheet" href="{{url('css/home.css')}}">
 </head>
 <body>
     
@@ -51,7 +52,13 @@
     </form>
     </div>
     @else
-    <p>login first</p>
+        <h1>Please login first</p>
+
+        <form method="get" action="/" class="submitcontainer log">
+            @csrf
+            <input action="/" type="submit" value="Log In/Register" />
+        </form >
+
     @endauth
 </body>
 </html>
